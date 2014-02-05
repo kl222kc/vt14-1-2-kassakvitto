@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using KassaKvitto.Model;
 
 namespace KassaKvitto
 {
@@ -19,7 +20,8 @@ namespace KassaKvitto
             if (IsValid)
             {   
                 var cost = double.Parse(CheckOutTextBox.Text);
-                Total.Text = cost.ToString();
+
+                Receipt receipt = new Receipt(cost);  
 
                 ReceiptPanel.Visible = true;
             }
