@@ -45,6 +45,9 @@ namespace KassaKvitto.Model
 
         public void Calculate(double subtotal)
         {
+
+            Subtotal = subtotal;
+
             if (subtotal < 500)
             {
                 DiscountRate = 0;
@@ -64,6 +67,9 @@ namespace KassaKvitto.Model
             {
                 DiscountRate = 15;
             }
+
+            MoneyOff = subtotal * (DiscountRate * 0.01);
+            Total = subtotal - MoneyOff;
 
         }
 
