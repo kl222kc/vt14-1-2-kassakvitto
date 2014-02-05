@@ -1,0 +1,48 @@
+﻿
+form {
+    margin-top: 25px;
+    width:400px;
+    padding: 1em;
+}
+
+.error {
+    color: #bf5757;
+}
+
+#CheckOutTextBox {
+    direction:rtl;
+}
+
+#CheckOutButton {
+    margin-top: 10px;
+}
+
+#ReceiptPanel {
+    width:200px;
+    background-color: #eeeeee;
+    padding: 1em;
+    text-align: center;
+    border: 1px solid black;
+    margin-left: 15px;
+}
+
+#ReciptContent {
+    border-bottom: 1px dashed black;
+    border-top: 1px dashed black;
+    text-align: left;
+    font-weight: bold;
+}
+
+.Recipt {
+    float: right;
+    font-weight: 100;
+}
+
+h1 {
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 5px;
+}
