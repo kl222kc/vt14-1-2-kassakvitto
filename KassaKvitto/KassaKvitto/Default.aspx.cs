@@ -13,5 +13,16 @@ namespace KassaKvitto
         {
 
         }
+
+        protected void CheckOutButton_Click(object sender, EventArgs e)
+        {
+            if (IsValid)
+            {   
+                var cost = double.Parse(CheckOutTextBox.Text);
+                Total.Text = cost.ToString();
+
+                ReceiptPanel.Visible = true;
+            }
+        }
     }
 }
