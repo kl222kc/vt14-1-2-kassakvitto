@@ -4,13 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>KassaKvitto</title>
+    <title>Kassakvitto</title>
     <link href="~/Content/site.css" rel="stylesheet" />
 </head>
 <body>
     <form id="checkOutForm" runat="server">
     <div>
-        <h1>KassaKvitto</h1>
+        <h1>Kassakvitto</h1>
         <asp:TextBox ID="CheckOutTextBox" runat="server" autofocus="autofocus"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="error" runat="server" ErrorMessage="Ange en total köpesumma" ControlToValidate="CheckOutTextBox" Display="Dynamic"></asp:RequiredFieldValidator>
         <asp:CompareValidator ID="CompareValidator1" CssClass="error" runat="server" ErrorMessage="Ange en total köpesumma större än 0" ControlToValidate="CheckOutTextBox" Display="Dynamic" Type="Double" Operator="GreaterThan" ValueToCompare="0"></asp:CompareValidator>
