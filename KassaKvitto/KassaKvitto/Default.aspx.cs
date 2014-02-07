@@ -24,7 +24,7 @@ namespace KassaKvitto
                 Receipt receipt = new Receipt(cost);
 
                 Total.Text = String.Format("{0:c2} kr", receipt.Subtotal);
-                DiscountRate.Text = String.Format("{0}", receipt.DiscountRate);
+                DiscountRate.Text = String.Format("{0:p0}", receipt.DiscountRate);
                 Discount.Text = String.Format("{0:c2} kr", receipt.MoneyOff);
                 SumToPay.Text = String.Format("{0:c2} kr", receipt.Total);
 

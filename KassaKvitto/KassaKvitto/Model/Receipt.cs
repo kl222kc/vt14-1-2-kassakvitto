@@ -12,13 +12,13 @@ namespace KassaKvitto.Model
         public double DiscountRate
         {
             get;
-            set;
+            private set;
         }
 
         public double MoneyOff
         {
             get;
-            set;
+            private set;
         }
 
         public double Subtotal
@@ -27,7 +27,7 @@ namespace KassaKvitto.Model
             {
                 return _subtotal;
             }
-            set
+            private set
             {
                 if (value < 1)
                 {
@@ -40,35 +40,31 @@ namespace KassaKvitto.Model
         public double Total
         {
             get;
-            set;
+            private set;
         }
 
         public void Calculate(double subtotal)
         {
-
             Subtotal = subtotal;
 
             if (subtotal < 500)
             {
                 DiscountRate = 0;
             }
-
-            if (subtotal > 499 && subtotal < 1000)
+            else if (subtotal < 1000)
             {
-                DiscountRate = 5;
+                DiscountRate = .05;
+            }
+            else if (subtotal < 5000)
+            {
+                DiscountRate = .10;
+            }
+            else 
+            {
+                DiscountRate = .15;
             }
 
-            if (subtotal > 999 && subtotal < 5000)
-            {
-                DiscountRate = 10;
-            }
-
-            if (subtotal > 4999)
-            {
-                DiscountRate = 15;
-            }
-
-            MoneyOff = subtotal * (DiscountRate * 0.01);
+            MoneyOff = subtotal * DiscountRate;
             Total = subtotal - MoneyOff;
 
         }
