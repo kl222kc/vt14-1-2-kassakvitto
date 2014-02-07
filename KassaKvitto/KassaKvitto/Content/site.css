@@ -10,7 +10,7 @@ form {
 }
 
 #CheckOutTextBox {
-    direction:rtl;
+    text-align: right;
 }
 
 #CheckOutButton {
